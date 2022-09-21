@@ -1,0 +1,16 @@
+#середній лабіринт
+python pacman.py -l medium4 -z .5 -p SearchAgent -a fn=lee_alg
+python pacman.py -l medium4 -z .5 -p SearchAgent -a fn=a_star
+python pacman.py -l medium4 -z .5 -p SearchAgent -a fn=a_star,heuristic=manhattan
+python pacman.py -l medium4 -z .5 -p SearchAgent -a fn=a_star,heuristic=greed
+#великий лабіринт
+python pacman.py -l medium6 -z .5 -p SearchAgent -a fn=lee_alg
+python pacman.py -l medium6 -z .5 -p SearchAgent -a fn=a_star
+python pacman.py -l medium6 -z .5 -p SearchAgent -a fn=a_star,heuristic=manhattan
+python pacman.py -l medium6 -z .5 -p SearchAgent -a fn=a_star,heuristic=greed
+
+#зібрати всі монети
+python pacman.py -l trickySearch -p SearchAgent -a fn=a_star,prob=FoodSearchProblem,heuristic=foodHeuristic
+python pacman.py -l trickySearch2 -p SearchAgent -a fn=a_star,prob=FoodSearchProblem,heuristic=foodHeuristic
+#всі кути
+python pacman.py -l bigCorners -z .5 -p SearchAgent -a fn=a_star,prob=CornersProblem
